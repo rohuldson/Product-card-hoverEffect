@@ -1,0 +1,122 @@
+body{
+    background: linear-gradient(
+        45deg,
+        #b91eda,
+        #a02ae0,
+        #8234e5,
+        #5d3be8,
+        #1241eb
+    );
+    font-family: "Playfair Display", serif;
+}
+
+.wrapper{
+    width: 270px;
+    height: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background: url("123.jpg");
+    background-color: skyblue;
+    background-size: cover;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.shadow{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background: rgba( 77, 77, 77, 0.8);
+    color: #fef5df;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.list-items{
+    padding-left: 25px;
+    letter-spacing: 1px;
+}
+
+.heading {
+    font-size: 25px;
+    line-height: 30px;
+    transform: translateY(-35px);
+    transition: all 0.7s;
+}
+
+.heading hr{
+    display: block;
+    width: 0;
+    border: none;
+    border-bottom: solid 2px #fef5df;
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    transition: all 0.5s;
+}
+
+.payment {
+    font-size: 22px;
+    line-height: 10px;
+    font-weight: bold;
+    transform: translateY(40px);
+    transition: all 0.7s;
+    margin-left: 10rem;
+    opacity: 0;
+
+}
+
+.payment .previous {
+    text-decoration: line-through;
+    color: pink;
+    filter: blur(0.7px);
+
+}
+
+.shoping{
+    font-size: 12px;
+    letter-spacing: 1px;
+    transform: translateY(30px);
+    transition: all 0.7s;
+    margin-left: 8rem;
+    opacity: 0;
+}
+
+.shoping i{
+    font-size: 16px;
+} 
+
+.shoping span{
+    margin-left: 5px;
+}
+
+.wrapper:hover .shadow{
+    opacity: 1;
+}
+
+.wrapper:hover .shadow .heading{
+    transform: translateY(0px);
+}
+
+.wrapper:hover .shadow hr{
+    width: 75px;
+    transition-delay: 0.4s ;
+}
+
+.wrapper:hover .shadow .payment{
+    transform: translateY(0px);
+    transition-delay: 0.4s;
+    opacity: 1;
+}
+
+.wrapper:hover .shadow .shoping{
+    transform: translateY(0px);
+    transition-delay: .6s;
+    opacity: 1;
+}
